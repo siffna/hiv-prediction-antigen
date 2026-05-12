@@ -17,7 +17,7 @@ function App() {
     console.log("Sending to backend:", input);
     
     try {
-      const response = await fetch('http://localhost:5000/api/predict', {
+      const response = await fetch('https://hiv-prediction-antigen.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(input)
