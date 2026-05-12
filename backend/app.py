@@ -5,7 +5,7 @@ from datetime import datetime
 import sqlite3
 
 app = Flask(__name__)
-CORS(app, origins="*")
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Initialize database
 def init_db():
